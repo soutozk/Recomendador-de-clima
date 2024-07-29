@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Personalizado</title>
+    <style>
+        /* Container para manter a posição */
+        .button-container {
+            position: fixed;
+            bottom: 20px; /* Ajuste conforme necessário */
+            right: 20px; /* Ajuste conforme necessário */
+            width: 50px; /* Ajuste conforme o tamanho do botão do VLibras */
+            height: 50px; /* Ajuste conforme o tamanho do botão do VLibras */
+        }
+
+        /* Estilo do botão personalizado */
+        .custom-button {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #00f; /* Ajuste conforme a cor desejada */
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1; /* Garante que o botão fique acima do botão do VLibras se necessário */
+        }
+        .custom-button img {
+            width: 24px; /* Ajuste conforme necessário */
+            height: 24px; /* Ajuste conforme necessário */
+        }
+    </style>
+</head>
+<body>
+    <!-- Adicione o script do VLibras aqui -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Container e botão Personalizado -->
+    <div class="button-container">
+        <button class="custom-button">
+            <img src="URL_DA_LOGO_PAPEL_CANETA" alt="Logo Papel e Caneta">
+        </button>
+    </div>
+</body>
+</html>
+
+
